@@ -1,0 +1,1069 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.16">
+    
+    
+      
+        <title>DownTownML</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.1c3799f8.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#graph-ml-resources" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="DownTownML" class="md-header__button md-logo" aria-label="DownTownML" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DownTownML
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Graph ML Resources
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="DownTownML" class="md-nav__button md-logo" aria-label="DownTownML" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DownTownML
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Graph ML Resources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Graph ML Resources
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#theory-videos" class="md-nav__link">
+    Theory | Videos ▶️
+  </a>
+  
+    <nav class="md-nav" aria-label="Theory | Videos ▶️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-graph-ml-with-deepfindr-level-beginner" class="md-nav__link">
+    Understanding Graph ML with DeepFindr | LEVEL : Beginner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-hour-great-session-on-graph-ml-by-microsoft-research-level-beginner" class="md-nav__link">
+    One Hour Great session on Graph ML by Microsoft Research | LEVEL : Beginner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cs224w-is-all-you-need-level-beginner-to-intermediate" class="md-nav__link">
+    CS224W is all you need | LEVEL : Beginner to Intermediate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enter-geometric-deep-learning-level-intermediate-to-advanced" class="md-nav__link">
+    Enter Geometric Deep Learning. | LEVEL : Intermediate to Advanced
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diving-deeper-to-graph-ml-with-research-paper-walk-through-level-intermediate" class="md-nav__link">
+    Diving Deeper to Graph ML with Research paper walk through | LEVEL : Intermediate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theory-books" class="md-nav__link">
+    Theory | Books 📗
+  </a>
+  
+    <nav class="md-nav" aria-label="Theory | Books 📗">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#machine-learning-with-pytorch-and-scikit-learn-level-beginner" class="md-nav__link">
+    Machine Learning with PyTorch and Scikit Learn | LEVEL : Beginner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-machine-learning-level-beginner" class="md-nav__link">
+    Graph Machine Learning | LEVEL : Beginner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-neural-networks-foundations-and-applications-level-intermediate" class="md-nav__link">
+    Graph Neural Networks: Foundations and Applications | LEVEL : Intermediate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-representation-learning-level-intermediate-to-advanced" class="md-nav__link">
+    Graph Representation Learning | LEVEL : Intermediate to Advanced
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-resources-with-more-hands-on-projects" class="md-nav__link">
+    Practical resources with more Hands-on projects 🙋‍♂️
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical resources with more Hands-on projects 🙋‍♂️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#playlist" class="md-nav__link">
+    PLAYLIST
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytorch-geometric-hands-on-workshop-level-begineer-to-intermediate" class="md-nav__link">
+    PyTorch Geometric Hands-on Workshop | LEVEL : Begineer to Intermediate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extended-graph-ml-series-by-deepfindr-level-begineer" class="md-nav__link">
+    Extended Graph ML series by DeepFindr | LEVEL : Begineer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#videos" class="md-nav__link">
+    VIDEOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-hour-session-on-gnn-using-tensorflow-level-begineer" class="md-nav__link">
+    1 Hour Session on GNN using Tensorflow | LEVEL : Begineer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blogs" class="md-nav__link">
+    BLOGS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-started-with-gnn-with-neptuneai-level-begineer" class="md-nav__link">
+    Getting started with GNN with NEPTUNE.ai | LEVEL : Begineer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on-tutorial-on-pytorch-geometric-blog-level-begineer" class="md-nav__link">
+    Hand's on Tutorial on PyTorch Geometric Blog | LEVEL : Begineer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-the-nitty-gritty-of-graph-attention-network-level-intermediate" class="md-nav__link">
+    Understand the nitty gritty of Graph Attention Network | LEVEL : Intermediate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distillpub-level-begineer-to-intermediate" class="md-nav__link">
+    DISTILL.PUB | LEVEL : Begineer to Intermediate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-ai-summer-level-begineer-to-intermediate" class="md-nav__link">
+    THE AI SUMMER | LEVEL : Begineer to Intermediate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cs224w-notes-at-wandbai-level-intermediate-to-advanced" class="md-nav__link">
+    CS224W Notes at WANDB.ai | LEVEL : Intermediate to Advanced
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-list-of-open-source-library-especially-made-for-graph-machine-learning" class="md-nav__link">
+    Some List of Open Source Library especially made for Graph Machine Learning 🌱
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-people-and-youtube-channels-to-follow-for-graph-ml-content" class="md-nav__link">
+    Some People and Youtube Channels to Follow for Graph ML content 🌱
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="IntrotoGraphML/" class="md-nav__link">
+        Introduction to Graph Machine Learning
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#theory-videos" class="md-nav__link">
+    Theory | Videos ▶️
+  </a>
+  
+    <nav class="md-nav" aria-label="Theory | Videos ▶️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understanding-graph-ml-with-deepfindr-level-beginner" class="md-nav__link">
+    Understanding Graph ML with DeepFindr | LEVEL : Beginner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#one-hour-great-session-on-graph-ml-by-microsoft-research-level-beginner" class="md-nav__link">
+    One Hour Great session on Graph ML by Microsoft Research | LEVEL : Beginner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cs224w-is-all-you-need-level-beginner-to-intermediate" class="md-nav__link">
+    CS224W is all you need | LEVEL : Beginner to Intermediate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enter-geometric-deep-learning-level-intermediate-to-advanced" class="md-nav__link">
+    Enter Geometric Deep Learning. | LEVEL : Intermediate to Advanced
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diving-deeper-to-graph-ml-with-research-paper-walk-through-level-intermediate" class="md-nav__link">
+    Diving Deeper to Graph ML with Research paper walk through | LEVEL : Intermediate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#theory-books" class="md-nav__link">
+    Theory | Books 📗
+  </a>
+  
+    <nav class="md-nav" aria-label="Theory | Books 📗">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#machine-learning-with-pytorch-and-scikit-learn-level-beginner" class="md-nav__link">
+    Machine Learning with PyTorch and Scikit Learn | LEVEL : Beginner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-machine-learning-level-beginner" class="md-nav__link">
+    Graph Machine Learning | LEVEL : Beginner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-neural-networks-foundations-and-applications-level-intermediate" class="md-nav__link">
+    Graph Neural Networks: Foundations and Applications | LEVEL : Intermediate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-representation-learning-level-intermediate-to-advanced" class="md-nav__link">
+    Graph Representation Learning | LEVEL : Intermediate to Advanced
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practical-resources-with-more-hands-on-projects" class="md-nav__link">
+    Practical resources with more Hands-on projects 🙋‍♂️
+  </a>
+  
+    <nav class="md-nav" aria-label="Practical resources with more Hands-on projects 🙋‍♂️">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#playlist" class="md-nav__link">
+    PLAYLIST
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytorch-geometric-hands-on-workshop-level-begineer-to-intermediate" class="md-nav__link">
+    PyTorch Geometric Hands-on Workshop | LEVEL : Begineer to Intermediate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extended-graph-ml-series-by-deepfindr-level-begineer" class="md-nav__link">
+    Extended Graph ML series by DeepFindr | LEVEL : Begineer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#videos" class="md-nav__link">
+    VIDEOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-hour-session-on-gnn-using-tensorflow-level-begineer" class="md-nav__link">
+    1 Hour Session on GNN using Tensorflow | LEVEL : Begineer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blogs" class="md-nav__link">
+    BLOGS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-started-with-gnn-with-neptuneai-level-begineer" class="md-nav__link">
+    Getting started with GNN with NEPTUNE.ai | LEVEL : Begineer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on-tutorial-on-pytorch-geometric-blog-level-begineer" class="md-nav__link">
+    Hand's on Tutorial on PyTorch Geometric Blog | LEVEL : Begineer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-the-nitty-gritty-of-graph-attention-network-level-intermediate" class="md-nav__link">
+    Understand the nitty gritty of Graph Attention Network | LEVEL : Intermediate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distillpub-level-begineer-to-intermediate" class="md-nav__link">
+    DISTILL.PUB | LEVEL : Begineer to Intermediate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-ai-summer-level-begineer-to-intermediate" class="md-nav__link">
+    THE AI SUMMER | LEVEL : Begineer to Intermediate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cs224w-notes-at-wandbai-level-intermediate-to-advanced" class="md-nav__link">
+    CS224W Notes at WANDB.ai | LEVEL : Intermediate to Advanced
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-list-of-open-source-library-especially-made-for-graph-machine-learning" class="md-nav__link">
+    Some List of Open Source Library especially made for Graph Machine Learning 🌱
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#some-people-and-youtube-channels-to-follow-for-graph-ml-content" class="md-nav__link">
+    Some People and Youtube Channels to Follow for Graph ML content 🌱
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="graph-ml-resources">Graph ML Resources</h1>
+<p><strong><code>Author</code> <a href="https://anindyadeep.github.io/portfolio/">Anindyadeep Sannigrahi</a></strong></p>
+<p><strong>KICK START YOUR GRAPH ML JOURNEY WITH THESE RESOURCES</strong></p>
+<p>One of the cool topics to study these days is `Graph Machine Learning. So here are a bunch of <strong>FREE</strong> resources that can help to kickstart the Graph ML journey. I have sorted these resources based on the degree of complexity and the time taken to finish them. There is no such constraint to finish some resource in some stipulated time. Everyone is expected to learn at their own pace.    </p>
+<h2 id="theory-videos"><strong>Theory</strong> | <strong><code>Videos</code></strong> ▶️</h2>
+<h3 id="understanding-graph-ml-with-deepfindr-level-beginner"><strong>Understanding Graph ML with <a href="https://www.youtube.com/c/DeepFindr">DeepFindr</a></strong> | <strong><code>LEVEL</code> : <code>Beginner</code></strong></h3>
+<p>If you just want some good <strong>intuition</strong> about how Graph Neural Networks work with fewer maths, check out this playlist : <a href="https://www.youtube.com/playlist?list=PLV8yxwGOxvvoNkzPfCx2i8an--Tkt7O8Z"><strong>PLAYLIST</strong></a>. First, just go through the <strong>first 6</strong> videos and it will give you a good understanding of the basics of Graph ML and Graph Nets.</p>
+<p><strong>Pre-requisites:</strong></p>
+<p>You are <strong>not at all</strong> expected to have any prior knowledge of Graph Machine Learning. Though <strong>some knowledge</strong> in machine learning or deep learning is expected. Knowledge in <code>PyTorch</code> is a plus.</p>
+<p><strong>Outcomes:</strong></p>
+<ol>
+<li>A basic understanding of what is Graph ML.</li>
+<li>Some practical use cases of Graph ML.</li>
+<li>How <code>message passing works</code>. (In a more visual way)</li>
+<li>Introduction to <code>PyTorch Geometric</code>, a <code>PyTorch</code> based library to code Graph ML models easily. </li>
+</ol>
+<p><a href="https://www.youtube.com/playlist?list=PLV8yxwGOxvvoNkzPfCx2i8an--Tkt7O8Z"><strong>PLAYLIST LINK</strong></a>.</p>
+<hr />
+<h3 id="one-hour-great-session-on-graph-ml-by-microsoft-research-level-beginner"><strong>One Hour Great session on Graph ML by Microsoft Research</strong> | <strong><code>LEVEL</code> : <code>Beginner</code></strong></h3>
+<p>If you want to understand Graph Machine Learning in just 1 session, Check out this <a href="https://www.youtube.com/watch?v=zCEYiCxrL_0"><strong>Video</strong></a> by <strong>Microsoft Research</strong>. Here you will get to learn about the very fundamentals of Graph Neural Networks. How do the message passing paradigms works? </p>
+<p><strong>Pre-requisites:</strong></p>
+<p>You are <strong>not at all</strong> expected to have any prior knowledge of Graph Machine Learning or any Deep Learning frameworks. Though some Knowledge of machine learning or deep learning is expected.</p>
+<p><strong>Outcomes:</strong></p>
+<ol>
+<li>A basic understanding of what is Graph ML.</li>
+<li>Some practical use cases of Graph ML.</li>
+<li>How <code>message passing works</code> and its mathematical working. Get to know different types of GNN and how are they used for various applications.</li>
+</ol>
+<p><a href="https://www.youtube.com/watch?v=zCEYiCxrL_0"><strong>VIDEO LINK</strong></a></p>
+<hr />
+<h3 id="cs224w-is-all-you-need-level-beginner-to-intermediate"><strong>CS224W is all you need</strong> | <strong><code>LEVEL</code> : <code>Beginner to Intermediate</code></strong></h3>
+<p><a href="https://www.youtube.com/c/stanfordengineering/playlists"><strong>Stanford Engineering</strong></a> is one of the best resources out there to study any topics of Machine Learning or Deep Learning. This <a href="https://www.youtube.com/playlist?list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn"><strong>playlist</strong></a> is very long and descriptive. But it is worth watching. It covers from the very basics of <strong><code>Graph theory</code></strong>, to how <strong><code>Graph Neural Networks</code></strong> and also it covers the practical aspects of Graph ML too. Some of that includes how to deal with <strong><code>Scalability</code></strong> in Graph Machine Learning. This playlist is rather a full course on Graph Machine Learning. So it is worth investing the time in completing this course on Graph ML.</p>
+<p><strong>Pre-requisites:</strong></p>
+<p>You are <strong>not at all</strong> expected to have any prior knowledge of Graph Machine Learning or any Deep Learning frameworks. Though some Knowledge of machine learning or deep learning is expected.</p>
+<p><strong>Outcomes:</strong></p>
+<ol>
+<li>The basics of Graph theory.</li>
+<li>The basics of Graph Machine Learning.</li>
+<li>Intermediate Graph ML theories like different types of GNN architectures and how to build that.</li>
+<li>Getting familiar with PyTorch Geometric library. </li>
+<li>Practical aspects like scalability in Graph ML.</li>
+</ol>
+<p><a href="https://web.stanford.edu/class/cs224w/"><strong>CS224W COURSE LINK</strong></a></p>
+<hr />
+<h3 id="enter-geometric-deep-learning-level-intermediate-to-advanced"><strong>Enter Geometric Deep Learning.</strong> | <strong><code>LEVEL</code> : <code>Intermediate to Advanced</code></strong></h3>
+<p>Here comes another <a href="https://www.youtube.com/playlist?list=PLn2-dEmQeTfQ8YVuHBOvAhUlnIPYxkeu3"><strong>playlist</strong></a>, also known as the AMMI Geometric Deep Learning course. This course deals with exploring the underlined fundamental representations of natural entities like <code>geodesics</code>, <code>manifolds</code>, <code>mesh structures</code> by treating those as Graphs. This is exciting and this subfield is also called Geometric Deep Learning. Legendary Graph ML researchers, <strong><code>Michael Bronstein (Imperial College/Twitter)  Joan Bruna (NYU)  Taco Cohen (Qualcomm), and Petar Veličković (DeepMind)</code></strong> are the instructors of this course.  </p>
+<p><strong>Pre-requisites:</strong></p>
+<ol>
+<li>Linear algebra.</li>
+<li>Some Geometric foundations of Linear algebra are a plus.</li>
+<li>Some mathematical fundamentals of Machine Learning. </li>
+<li>The geometric side of computer vision which include topics like 3D geometry is a plus. </li>
+</ol>
+<p><strong>Outcomes:</strong></p>
+<ol>
+<li>Understanding a different perspective of Machine Learning.</li>
+<li>Understanding the geometric and pure non-euclidean paradigms of fundamental natural phenomena and events.</li>
+<li>Advanced theories of Machine Learning and Graph ML.</li>
+</ol>
+<p>In short, the outcome would be very satisfying and would open a new door for research for the aspirants.</p>
+<p><strong><a href="https://www.youtube.com/playlist?list=PLn2-dEmQeTfQ8YVuHBOvAhUlnIPYxkeu3">AMMI GEOMETRIC DEEP LEARNING COURSE LINK</a></strong></p>
+<hr />
+<h3 id="diving-deeper-to-graph-ml-with-research-paper-walk-through-level-intermediate"><strong>Diving Deeper to Graph ML with Research paper walk through</strong> | <strong><code>LEVEL</code> : <code>Intermediate</code></strong></h3>
+<p>Reading a research paper is a great way to understand and dive deeper into some topic. So, if you want to understand some of the most popular Graph Neural Network architecture papers as well as the newer topics of Graph ML covering the geometric perspectives, then you must check out the awesome paper walkthrough series by <strong><code>Aleksa Gordić, (Deepmind)</code></strong></p>
+<p><strong>Pre-requisites:</strong>
+It's better to have some <strong>prior</strong> Knowledge in Graph Machine Learning. And stuffs like how a <strong>GNN</strong> fundamentally works would save your time by not getting confused during watching the playlist. </p>
+<p><strong>Outcomes:</strong>
+1. A better and deeper Knowledge of Graph ML.
+2. Understand how to read a research paper and get insights from it.</p>
+<p><strong><a href="https://www.youtube.com/playlist?list=PLBoQnSflObckArGNhOcNg7lQG_f0ZlHF5">PLAYLIST LINK</a></strong></p>
+<hr />
+<h2 id="theory-books"><strong>Theory</strong> | <strong><code>Books</code></strong> 📗</h2>
+<p>Now that you have got some cool video resources, here are some books for book lovers. Also, this book provides a better in-depth understanding of Graph Machine Learning. </p>
+<h3 id="machine-learning-with-pytorch-and-scikit-learn-level-beginner"><strong>Machine Learning with PyTorch and Scikit Learn</strong> | <strong><code>LEVEL</code> : <code>Beginner</code></strong></h3>
+<p>One of the best books out there for beginners in ML. This book not only covers the basics of Machine Learning, and deep learning but also contains some cool topics like Graph ML and Deep Reinforcement Learning. <strong><code>Chapter 18</code></strong> contains the full theory of what Graph ML is, and its different use cases. It also helps you to code a simple Graph Neural Network model from scratch in <code>PyTorch</code>. </p>
+<p><strong>Pre-requisites:</strong></p>
+<p>To <strong>get started</strong> with the book in <strong>general</strong>, you absolutely <strong>do not</strong> need to have any prior knowledge of Machine Learning or Deep Learning. Even this book covers the <strong>basics of PyTorch and later PyTorch Geometric</strong> too. So if you are planning to start from the very start, this book is perfect for you. But if you <strong>specifically</strong> want to read <strong><code>Chapter 18</code></strong> of this book, then prior Knowledge of Deep learning basics and PyTorch basics is expected. </p>
+<p><strong>Outcomes:</strong></p>
+<ol>
+<li>Access to very good compiled resources of machine learning in the form of a book.</li>
+<li>Access to different other topics of ML and DL other than Graph ML.</li>
+<li>Getting a good foundation in Graph ML.</li>
+</ol>
+<p><strong><a href="https://www.amazon.in/Machine-Learning-PyTorch-Scikit-Learn-learning/dp/1801819319/ref=asc_df_1801819319/?tag=googleshopdes-21&amp;linkCode=df0&amp;hvadid=586338225290&amp;hvpos=&amp;hvnetw=g&amp;hvrand=4758050285249186775&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9298466&amp;hvtargid=pla-1763569602912&amp;psc=1">BOOK LINK</a></strong></p>
+<hr />
+<h3 id="graph-machine-learning-level-beginner"><strong>Graph Machine Learning</strong> | <strong><code>LEVEL</code> : <code>Beginner</code></strong></h3>
+<p>Now if you want to get a hands-on book dedicated to the basics of graphs and topics like How to load a Graph dataset, visualize it using <code>NetworkX</code> and create Machine Learning models to operate on this dataset using <code>Tensorflow</code>. This book is a perfect pick. Also, this book has some better visualizations to make readers understand the topics. So definitely check this out, if you are more aligned with Tensorflow.</p>
+<p><strong>Pre-requisites:</strong></p>
+<p>You are <strong>not at all</strong> expected to have any prior knowledge of Graph Machine Learning. Though some prior Knowledge of machine learning or deep learning and some Knowledge of how to use Tensorflow will give you an edge and will save your time. </p>
+<p><strong>Outcomes:</strong></p>
+<ol>
+<li>Getting a good foundation in Graph ML.</li>
+<li>You will be able to use some popular libraries like <code>TensorFlow</code>, <code>ScikitLearn</code>, <code>NetworkX</code> etc.</li>
+<li>Able to visualize Graph datasets and also apply Graph ML models to do different types of tasks. </li>
+</ol>
+<p><strong><a href="https://www.amazon.in/Graph-Machine-Learning-techniques-algorithms/dp/1800204493">BOOK LINK</a></strong></p>
+<hr />
+<h3 id="graph-neural-networks-foundations-and-applications-level-intermediate"><strong>Graph Neural Networks: Foundations and Applications</strong> | <strong><code>LEVEL</code> : <code>Intermediate</code></strong></h3>
+<p>This book provides you with a more formal way to teach Graph Machine Learning in general and how Graph Neural Networks in particular. It teaches what <code>Representation Learning</code> in general is. And also provides a great depth of how <code>representation learning</code> is used in the context of images, sound, texts, and graphs. From very popular topics to very newer and untouched topics in graph ML, this book covers it all. The book has 700+ pages. But it is not required to finish the book at once. But reading this book is surely worth it when it comes to understanding different Graph ML topics in depth. </p>
+<p><strong>Pre-requisites:</strong></p>
+<p>You are <strong>not at all</strong> expected to have any prior knowledge of Graph Machine Learning. Though Knowledge in Deep Learning and how Different types of Neural Network works is a plus. Also, some mathematical foundations like some common concepts of Linear algebra and calculus will save time. </p>
+<p><strong>Outcomes:</strong></p>
+<ol>
+<li>You will be in a position to explore very advanced research topics in Graph Machine Learning.</li>
+<li>A very strong theoretical foundation is guaranteed.</li>
+</ol>
+<p><strong><a href="https://www.amazon.in/Graph-Neural-Networks-Foundations-Applications/dp/9811660530">BOOK LINK</a></strong></p>
+<hr />
+<h3 id="graph-representation-learning-level-intermediate-to-advanced"><strong>Graph Representation Learning</strong> | <strong><code>LEVEL</code> : <code>Intermediate to Advanced</code></strong></h3>
+<p>This is also a famous book related to representation learning and the theory behind representation learning and Graph ML. It also covers some graph theories. This book is small but is a bit advanced. So not recommended for beginners. This book covers some advanced concepts like Spectral Graph theory. But if you have some prior knowledge of ML and some foundational mathematical concepts, then this book would be a great resource to revise. </p>
+<p><strong>Pre-requisites:</strong></p>
+<ol>
+<li>Linear algebra.</li>
+<li>Some Geometric foundations of Linear algebra are a plus.</li>
+<li>Knowledge in Signal Theory and Graph signal processing is a plus.</li>
+</ol>
+<p><strong>Outcomes</strong></p>
+<ol>
+<li>Better and strong mathematical grasp of Graph ML and representation Learning.</li>
+<li>Better and polished mathematical foundations in the context of Graph ML.</li>
+</ol>
+<p><strong><a href="https://www.cs.mcgill.ca/~wlh/grl_book/">BOOK LINK</a></strong></p>
+<hr />
+<h2 id="practical-resources-with-more-hands-on-projects"><strong>Practical resources with more Hands-on projects</strong> 🙋‍♂️</h2>
+<p>Here are some resources containing some playlists, videos, and blogs. These are more practical and more hands-on.</p>
+<h3 id="playlist"><strong><code>PLAYLIST</code></strong></h3>
+<h3 id="pytorch-geometric-hands-on-workshop-level-begineer-to-intermediate"><strong>PyTorch Geometric Hands-on Workshop</strong> | <strong><code>LEVEL</code> : <code>Begineer to Intermediate</code></strong></h3>
+<p>This set of videos in the playlist provides theory as well as hands-on tutorials using <code>PyTorch Geometric</code>. It covers all the topics like:</p>
+<ol>
+<li>How to load Graph data using PyG</li>
+<li>How to create a GNN model using PyG</li>
+<li>How to create a custom message-passing layer and custom GNN layer</li>
+<li>Some Advanced topics of PyG</li>
+</ol>
+<p><strong>Pre-requisites:</strong></p>
+<p>Some Knowledge of Machine Learning / Deep Learning is required. Knowledge of Graph Neural networks is a plus.</p>
+<p><strong><a href="https://www.youtube.com/playlist?list=PLGMXrbDNfqTzqxB1IGgimuhtfAhGd8lHF">PLAYLIST LINK</a></strong></p>
+<hr />
+<h3 id="extended-graph-ml-series-by-deepfindr-level-begineer"><strong>Extended Graph ML series by <a href="https://www.youtube.com/c/DeepFindr">DeepFindr</a></strong> | <strong><code>LEVEL</code> : <code>Begineer</code></strong></h3>
+<p>This Playlist contains a full playlist that covers the whole basics of Graph Machine Learning. It provides cool animations and also does hand on practical using <code>PyTorch Geometric</code>. It is worth checking out. </p>
+<p><strong>Pre-requisites:</strong></p>
+<p>Some Knowledge of Machine Learning / Deep Learning is a plus. But you are <strong>not</strong> expected to have any prior knowledge of Graph Machine Learning. </p>
+<p><strong>Outcomes</strong></p>
+<ol>
+<li>A basic understanding of what is Graph ML.</li>
+<li>Some practical use cases of Graph ML.</li>
+<li>How <code>message passing works</code>. (In a more visual way)</li>
+<li>Understand how to use <code>PyTorch Geometric</code> libraries to create GNN models to solve some graph-related problems.</li>
+</ol>
+<p><a href="https://www.youtube.com/playlist?list=PLV8yxwGOxvvoNkzPfCx2i8an--Tkt7O8Z"><strong>PLAYLIST LINK</strong></a>.</p>
+<hr />
+<h3 id="videos"><strong><code>VIDEOS</code></strong></h3>
+<h3 id="1-hour-session-on-gnn-using-tensorflow-level-begineer"><strong>1 Hour Session on GNN using Tensorflow</strong> | <strong><code>LEVEL</code> : <code>Begineer</code></strong></h3>
+<p>Check out this great 1 hr session come tutorial by <strong><code>Petar Veličković</code></strong>, Where he provides some great insights on how graph machine learning works and also does a hands-on session using <code>TensorFlow</code>. So <code>TensorFlow</code> lovers, this video is a perfect fit for you. </p>
+<p><strong>Pre-requisites:</strong></p>
+<p>Some Knowledge of Machine Learning / Deep Learning is a plus. But you are <strong>not</strong> expected to have any prior knowledge of Graph Machine Learning. </p>
+<p><strong>Outcomes</strong></p>
+<ol>
+<li>A basic understanding of what is Graph ML.</li>
+<li>How to code simple GNNs using TensorFlow.</li>
+</ol>
+<p><strong><a href="https://www.youtube.com/watch?v=8owQBFAHw7E">VIDEO LINK</a></strong></p>
+<hr />
+<!-- Also provide the Stanford 1 hr video in this list -->
+
+<h3 id="blogs"><strong><code>BLOGS</code></strong></h3>
+<h3 id="getting-started-with-gnn-with-neptuneai-level-begineer"><strong>Getting started with GNN with NEPTUNE.ai</strong> | <strong><code>LEVEL</code> : <code>Begineer</code></strong></h3>
+<p>If want to understand the basics of GNNs, message passing, applications of GNNs, and also code a simple GNN with bare PyTorch, then this blog is all you need. One of the most compact blogs that cover all the above topics. This blog is also good for beginners if they want to get a small glimpse of Graph ML in a short period.</p>
+<p><strong>Pre-requisites:</strong></p>
+<p>Some Knowledge of Machine Learning / Deep Learning is a plus. But you are <strong>not</strong> expected to have any prior knowledge of Graph Machine Learning. </p>
+<p><strong>Outcomes</strong></p>
+<ol>
+<li>A basic understanding of what is Graph ML.</li>
+<li>How to code simple GNN using just PyTorch.</li>
+<li>Understand the introductory math of message passing.</li>
+<li>Understand the different applications of Graph ML and GNNs.</li>
+</ol>
+<p><strong><a href="https://neptune.ai/blog/graph-neural-network-and-some-of-gnn-applications'">BLOG LINK</a></strong></p>
+<hr />
+<h3 id="hands-on-tutorial-on-pytorch-geometric-blog-level-begineer"><strong>Hand's on Tutorial on PyTorch Geometric Blog</strong> | <strong><code>LEVEL</code> : <code>Begineer</code></strong></h3>
+<p>This is a great blog for starters who want to enter the Graph ML space. This two-part blog covers the very basics of Graph Machine learning concepts and also implements those concepts on PyTorch using a real-world dataset. The blog is interactive and it sure will be worth it to check that out. </p>
+<p><strong>Pre-requisites:</strong></p>
+<p>Some Knowledge of Machine Learning / Deep Learning is a plus. But you are <strong>not</strong> expected to have any prior knowledge of Graph Machine Learning. </p>
+<p><strong>Outcomes</strong></p>
+<ol>
+<li>A basic understanding of what is Graph ML.</li>
+<li>How to code simple GNNs using PyTorch Geometric</li>
+</ol>
+<p><strong><a href="https://medium.com/towards-data-science/a-beginners-guide-to-graph-neural-networks-using-pytorch-geometric-part-1-d98dc93e7742">BLOG PART 1</a> | <a href="https://towardsdatascience.com/a-beginners-guide-to-graph-neural-networks-using-pytorch-geometric-part-2-cd82c01330ab">BLOG PART 2</a></strong></p>
+<hr />
+<h3 id="understand-the-nitty-gritty-of-graph-attention-network-level-intermediate"><strong>Understand the nitty gritty of Graph Attention Network</strong> | <strong><code>LEVEL</code> : <code>Intermediate</code></strong></h3>
+<p>This blog is provided by the Deep Learning group of the Indian Institute of Technology Roorkee (IITR). This blog provides some great insights about the very basic difference between the two most popular architectures viz: <code>Graph Convolutional Network (GCN)</code> and <code>Graph Attention Network (GAT)</code>. This blog also provides an in-depth tutorial of <code>Graph Attention Network</code> and also provides the inner working through <code>PyTorch</code> Code. Readers can gain some great insights and their foundations polished in the working of GATs. </p>
+<ol>
+<li>Prior Knowledge in Machine Learning / Deep Learning.</li>
+<li>Prior Knowledge in Graph Machine Learning.</li>
+</ol>
+<p><strong><a href="https://dsgiitr.com/blogs/gat/">BLOG LINK</a></strong></p>
+<hr />
+<h3 id="distillpub-level-begineer-to-intermediate"><strong>DISTILL.PUB</strong> | <strong><code>LEVEL</code> : <code>Begineer to Intermediate</code></strong></h3>
+<p>One of the most interactive blogs that cover the topic of Graph Machine Learning. Though some parts cover the spectral graph machine learning concepts (in part 2), which require some math concepts. However, readers not aware of those concepts can just only read this blog to visualize the different representations and animations to get more intuition. </p>
+<p><strong>Pre-requisites:</strong></p>
+<ol>
+<li>Prior Knowledge in Machine Learning / Deep Learning.</li>
+<li>Some concepts of Linear Algebra like Laplacian matrix, diagonalization, etc.</li>
+</ol>
+<p><strong>Outcomes</strong></p>
+<p>Readers will get to build great visual intuition about what Graph Machine Learning is and about its different applications.</p>
+<p><strong><a href="https://distill.pub/2021/gnn-intro/">BLOG LINK</a></strong></p>
+<hr />
+<h3 id="the-ai-summer-level-begineer-to-intermediate"><strong>THE AI SUMMER</strong> | <strong><code>LEVEL</code> : <code>Begineer to Intermediate</code></strong></h3>
+<p><strong>THE AI SUMMER</strong>, is one of the best new age Machine Learning blogs that not only covers Graph Machine Learning but other Hot topics like Transformers, ViTs, Multimodal learning, etc. The blog contains a subsection dedicated to Graph Machine Learning. The blog explains Graph ML and the working of GNNs along with its code in a very compact form. This source is very much useful to get some more added information regarding Graph Machine Learning. </p>
+<p><strong>Pre-requisites:</strong></p>
+<ol>
+<li>Prior Knowledge in Machine Learning / Deep Learning.</li>
+<li>Some concepts of Graph ML is a plus.</li>
+</ol>
+<p><strong><a href="https://theaisummer.com">BLOG LINK</a></strong></p>
+<hr />
+<h3 id="cs224w-notes-at-wandbai-level-intermediate-to-advanced"><strong>CS224W Notes at WANDB.ai</strong> | <strong><code>LEVEL</code> : <code>Intermediate to Advanced</code></strong></h3>
+<p>Another great resource of Graph Machine Learning. These are the notes of the popular <strong><a href="https://web.stanford.edu/class/cs224w/">CS224W</a></strong> course. This set of blogs covers the basics of Graph theory along with some theories of topology and network science. Further, it covers the foundational theories of Graph Neural networks and message passing. This blog is more like revision notes, so the readers should have some prior knowledge of Machine Learning and Graph Machine Learning. </p>
+<p><strong>Pre-requisites:</strong></p>
+<ol>
+<li>Prior Knowledge in Machine Learning / Deep Learning.</li>
+<li>Some concepts of Graph ML is a plus.</li>
+<li>Completion of CS224W provides a great edge. </li>
+</ol>
+<p><strong>Outcomes</strong></p>
+<ol>
+<li>Readers will have more in-depth clear Knowledge of foundational topics of the graph, topology, and network science.</li>
+<li>Also a great foundation of the inner nitty-gritty working of Graph Neural Networks.</li>
+<li>Knowledge of different Graph ML tasks and working with different types of GNN architectures.</li>
+</ol>
+<p><strong><a href="https://wandb.ai/syllogismos/machine-learning-with-graphs/reports">BLOG LINK</a></strong></p>
+<hr />
+<h2 id="some-list-of-open-source-library-especially-made-for-graph-machine-learning"><strong>Some List of Open Source Library especially made for Graph Machine Learning</strong> 🌱</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Based on</th>
+<th>Github Link</th>
+<th>Documentation Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PyTorch Geometric</td>
+<td>PyTorch</td>
+<td><a href="https://github.com/pyg-team/pytorch_geometric">LINK</a></td>
+<td><a href="https://pytorch-geometric.readthedocs.io/en/latest/">LINK</a></td>
+</tr>
+<tr>
+<td>Deep Graph Library</td>
+<td>TensorFlow and PyTorch</td>
+<td><a href="https://github.com/dmlc/dgl/">LINK</a></td>
+<td><a href="https://www.dgl.ai/">LINK</a></td>
+</tr>
+<tr>
+<td>Graph Nets Library</td>
+<td>TensorFlow</td>
+<td><a href="https://github.com/deepmind/graph_nets">LINK</a></td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Spektral</td>
+<td>TensorFlow Keras</td>
+<td><a href="https://github.com/danielegrattarola/spektral/">LINK</a></td>
+<td><a href="https://graphneural.network/">LINK</a></td>
+</tr>
+<tr>
+<td>Jraph</td>
+<td>JAX</td>
+<td><a href="https://github.com/deepmind/jraph">LINK</a></td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<!-- Doubt in the name of TensorFlow's library -->
+
+<h2 id="some-people-and-youtube-channels-to-follow-for-graph-ml-content"><strong>Some People and Youtube Channels to Follow for Graph ML content</strong> 🌱</h2>
+<p><strong><code>NOTE: The Following ordering is done on Random Fashion</code></strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Youtube</th>
+<th>Twitter</th>
+<th>Linkedin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aleksa Gordić</td>
+<td><a href="https://www.youtube.com/c/TheAIEpiphany">LINK</a></td>
+<td><a href="https://twitter.com/gordic_aleksa?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">LINK</a></td>
+<td><a href="https://rs.linkedin.com/in/aleksagordic">LINK</a></td>
+</tr>
+<tr>
+<td>Michael Bronstein</td>
+<td><a href="https://www.youtube.com/c/MichaelBronsteinGDL/videos">LINK</a></td>
+<td><a href="https://twitter.com/mmbronstein?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">LINK</a></td>
+<td><a href="https://uk.linkedin.com/in/mbronstein">LINK</a></td>
+</tr>
+<tr>
+<td>Petar Veličković</td>
+<td><a href="https://www.youtube.com/channel/UC9bkKi8Us7yevvP1KIBQHog">LINK</a></td>
+<td><a href="https://twitter.com/petarv_93?lang=en">LINK</a></td>
+<td><a href="https://uk.linkedin.com/in/petarvelickovic">LINK</a></td>
+</tr>
+<tr>
+<td>DeepFindr</td>
+<td><a href="https://www.youtube.com/c/DeepFindr/featured">LINK</a></td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Zak Host</td>
+<td><a href="https://www.youtube.com/channel/UCxw9_WYmLqlj5PyXu2AWU_g">LINK</a></td>
+<td><a href="https://twitter.com/zakjost">LINK</a></td>
+<td><a href="https://www.linkedin.com/in/zakjost/">LINK</a></td>
+</tr>
+<tr>
+<td>Letitia Parcalabescu</td>
+<td><a href="https://www.youtube.com/channel/UCobqgqE4i5Kf7wrxRxhToQA">LINK</a></td>
+<td><a href="https://twitter.com/AICoffeeBreak">LINK</a></td>
+<td><a href="https://www.linkedin.com/in/letitia-parcalabescu/?originalSubdomain=de">LINK</a></td>
+</tr>
+<tr>
+<td>Jurij Leskovec</td>
+<td><a href="https://web.stanford.edu/class/cs224w/">LINK</a></td>
+<td><a href="https://twitter.com/jure?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">LINK</a></td>
+<td><a href="https://www.linkedin.com/in/leskovec/">LINK</a></td>
+</tr>
+</tbody>
+</table>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+      
+        
+        <a href="IntrotoGraphML/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction to Graph Machine Learning" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Introduction to Graph Machine Learning
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.3a4b43e5.min.js"></script>
+      
+    
+  </body>
+</html>

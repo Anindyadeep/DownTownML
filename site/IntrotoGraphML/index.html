@@ -1,0 +1,662 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Very basic introduction to different terminologies and overview in Graph ML.">
+      
+      
+        <meta name="author" content="Anindyadeep Sannigrahi">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.16">
+    
+    
+      
+        <title>Introduction to Graph Machine Learning - DownTownML</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.1c3799f8.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-graph-machine-learning" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DownTownML" class="md-header__button md-logo" aria-label="DownTownML" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DownTownML
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction to Graph Machine Learning
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DownTownML" class="md-nav__button md-logo" aria-label="DownTownML" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DownTownML
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Graph ML Resources
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction to Graph Machine Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Introduction to Graph Machine Learning
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-graph-ml-is-nowadays-so-popular" class="md-nav__link">
+    Why Graph ML is nowadays so popular?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-what-are-graphs" class="md-nav__link">
+    So, what are Graphs?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-features" class="md-nav__link">
+    Node features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge-features" class="md-nav__link">
+    Edge Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacency-matrix-and-adjacency-lists" class="md-nav__link">
+    Adjacency matrix and Adjacency lists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#embeddings" class="md-nav__link">
+    Embeddings
+  </a>
+  
+    <nav class="md-nav" aria-label="Embeddings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#so-what-are-embeddings-in-graphs" class="md-nav__link">
+    So What are embeddings in Graphs?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-embeddings" class="md-nav__link">
+    Graph Embeddings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-of-graphml" class="md-nav__link">
+    Application of GraphML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-graph-ml-is-nowadays-so-popular" class="md-nav__link">
+    Why Graph ML is nowadays so popular?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-what-are-graphs" class="md-nav__link">
+    So, what are Graphs?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-features" class="md-nav__link">
+    Node features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge-features" class="md-nav__link">
+    Edge Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adjacency-matrix-and-adjacency-lists" class="md-nav__link">
+    Adjacency matrix and Adjacency lists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#embeddings" class="md-nav__link">
+    Embeddings
+  </a>
+  
+    <nav class="md-nav" aria-label="Embeddings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#so-what-are-embeddings-in-graphs" class="md-nav__link">
+    So What are embeddings in Graphs?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-embeddings" class="md-nav__link">
+    Graph Embeddings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-of-graphml" class="md-nav__link">
+    Application of GraphML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="introduction-to-graph-machine-learning">Introduction to Graph Machine Learning.</h1>
+<p><strong><code>Author</code> <a href="https://anindyadeep.github.io/portfolio/">Anindyadeep Sannigrahi</a></strong></p>
+<p>This is an introductory blog post, where we will cover all the basics terminologies, to get started with GraphML. Later parts will cover details regarding each of the Graph Machine learning topics and hands-on experiences with Graph Neural networks in PyTorch Geometric or dgl.</p>
+<h2 id="why-graph-ml-is-nowadays-so-popular">Why Graph ML is nowadays so popular?</h2>
+<p>The traditional machine learning techniques, like simple linear regression, naive Bayes, decision trees, random forests, SVMs, SVRs which are nothing but a blend of statistical Inferences and computational algorithms, seemed to be very appropriate for data with very fewer complexities. But with the rising complexity of the data, w.r.t structural changes and increasing dimensionality, which can be seen in images, texts, wave-forms, graphs, etc, these kinds of algorithms started to give less promising and generalized results and facing classic problems like the curse of dimensionality, easy underfitting or overfitting of the models.</p>
+<p>So, when traditional machine learning algorithms seemed to get failed with the increasing complexity of data, that time a new subset of Machine learning called deep learning emerged out. And all deep learning algorithms from the oldest to the latest one, revolve around the foundations of the working mechanisms of  Neural Networks. Based on the working Neural Networks,  two more fundamental architectures, CNN for images and RNN for sequential data emerged out, and were very successful in learning and generalizing universal approximation functions for complex data like images and sequential data like texts, waveforms, etc.</p>
+<p>But here comes the twist. Till now, all the methods and types of data (images, text, etc) were falling under the category of structured data. These all types of data, like tabular data, images, texts, etc are all some kind of euclidian data. And this euclidian origin makes their learning/optimization easy and stable. But what about the Graphical data. Graphical data are so much ubiquitous, that they can be seen everywhere. Some of the examples are:</p>
+<ul>
+<li>
+<ol>
+<li>The internet itself</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>The facebook network of friends</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Molecular structures</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Our Brain (combination of millions of neurons)</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>3D shapes, etc.</li>
+</ol>
+</li>
+</ul>
+<p>Even the images and texts or the waveforms can be seen and translated as graphical data. But those types of graphical data are kind of trivial. As those are structured, unlike general graphical data. So predicting something which is based on non-euclidean subspace is difficult for traditional deep learning or machine learning models. Because we all know that graphs do not have any certain length or shape. And how we should represent the edges. How to represent the connections. Now here anyone comes with the answer that we can use adjacency matrices. But then think of the scale of the data, we are talking about. Suppose, we have to compute giant graphs, like facebook's network of users and their friends. So for all these uncertainties, we can not use simple MLP or MLP based models to figure out optimized solutions. And so for this, a new subset of Machine Learning comes into play, which is known as Graph Machine Learning. </p>
+<h2 id="so-what-are-graphs">So, what are Graphs?</h2>
+<p>A graph is nothing but a collection of different nodes, which are connected with some links called edges. Mathematically we can define a graph as :</p>
+<p align='center'>
+G = (V, E, A) 
+</p>
+
+<p>Where <code>G</code> represents a graph, and <code>V</code> represents a collection of nodes: <code>{ v1, v2 …. vn}</code> and <code>E</code> represents collections of edges: <code>{e1, e2, ….. em}</code>  and <code>A</code> represent the topological structure by defining the adjacency matrix.</p>
+<p>So this is how we generally represent a graph structure. Now we might have read in some courses like data structures, that graphs are one of the essential data structures for path-finding algorithms. This is true. But if we see, then we generally deal with nodes, which are often represented as some numbers like 1,2,3 ... or some letters like A, B, C, ... But in Machine learning, the nodes we see, do not contain some single numbers or letters. We represent each of the nodes and sometimes the edges as vectors. And so, these nodes containing some vectors within them are known to be node features. If edges are also represented as some vectors, then we define that as edge features.</p>
+<p>Now, sometimes people get confused, by considering edge features representing the connections of the graphs. This is a wrong assumption. Edge features are some kind of optional features, we use in graph ML other than node features, which helps us to learn the underlined representation more undoubtedly. But these edge features are not the representatives of the connection within the nodes. Connections are represented as the Adjacency matrix. For example, we can think of a chemical molecule as a graph. The nodes represent the atoms, and the edges represent the different types of bonds, like a single bond, double bond, etc. So for representing the types of bond, we require some features, that are represented through edge features. Edge features are not important as node features every time. Also, we will discuss more details in the later parts.</p>
+<h2 id="node-features">Node features</h2>
+<p><img alt="Node features image" src="https://www.python-engineer.com/images/2022-01-15-graph-ml1/graphml1.webp" /></p>
+<p>(Source: <a href="https://www.researchgate.net/profile/Hongyang-Gao/publication/326496656/figure/fig1/AS:652202121109508@1532508511971/An-illustration-of-graph-data-There-are-7-nodes-in-this-graph-and-each-node-has-3.png">Research Gate</a>)</p>
+<p>Node features are the fundamental input for graph machine learning models. This is simply the feature vector a node of a graph is carrying. Mathematically a graph <code>G = (V, E)</code> where <code>V</code> is the set of nodes. All the nodes v that belongs to <code>V</code> are a <code>d-dimensional</code> vector. Those d-dimensional vectors are the node feature vectors. So if there are N Nodes and every node is having d-dimensional features, the input matrix X is a N x d matrix. Some simple examples might include, suppose in a molecular graph, the nodes are the atoms, and each atom may have several properties like:</p>
+<ul>
+<li>atomic number</li>
+<li>mass num, atomicity</li>
+<li>hybridization of the atom</li>
+</ul>
+<p>All these are some numerical value features, and when stacked together turns out to be a vector.</p>
+<h2 id="edge-features">Edge Features</h2>
+<p><img alt="Edge features image" src="https://www.python-engineer.com/images/2022-01-15-graph-ml1/graphml2.webp" /></p>
+<p>Edge features are similar to node features, but <strong>Edge features do not represent the connection in between the nodes of the graphs</strong> As mentioned in the earlier example, we already know that atoms can be considered some sort of small graphs, and these atoms have different types of bonds, which can be considered as edges of the graphs. So different kinds of properties like:</p>
+<ul>
+<li>Type of the bond (single, double, triple)</li>
+<li>Bond angle</li>
+<li>any other sort of chemical properties of the bonds, which have some sort of numerical/boolean values</li>
+</ul>
+<p>All of these when stacked upon each other form a vector of supposed <code>m</code> dimension. This vector formed is known as edge features of the graphs. In most of the scenarios, edge features are generally been ignored, as they are sometimes less significant than node features or not available.</p>
+<h2 id="adjacency-matrix-and-adjacency-lists">Adjacency matrix and Adjacency lists</h2>
+<p><img alt="Adjacency matrix and Adjacency lists" src="https://www.python-engineer.com/images/2022-01-15-graph-ml1/graphml3.webp" /></p>
+<p>The adjacency matrix is the one way in which we store the connections between the graphs. An element will be 1, if there exists some kind of connection between the nodes else it will be 0. But here is a problem. Consider a giant graph, which is as big as a Facebook social network. In this case, most of the entries are zeros, making the graph a highly sparse matrix. Algorithms based on that would be highly in-efficient based on space. An alternative to the adjacency matrix is the adjacency list or coordinate format. There are different ways to represent an adjacency list. For e.g taking a group of tuples, where each tuple represents the node's source and target node connection.</p>
+<p><img alt="Source and target" src="https://www.python-engineer.com/images/2022-01-15-graph-ml1/graphml4.webp" /></p>
+<p>We can take two lists or a 2d matrix of 2 rows and m-columns, where m is the total number of valid connections, where the first row is the source and the other is the target. The figure shows the connections in the COO format of the same graph.</p>
+<h2 id="embeddings">Embeddings</h2>
+<p><img alt="Embeddings" src="https://www.python-engineer.com/images/2022-01-15-graph-ml1/graphml5.webp" /></p>
+<p>This is one of the most important concepts which is not only important in GraphML but also in general. We generally hear this word from the NLP field the most. But we know that embedding is everywhere.</p>
+<p>Defining an embedding is easy, it's simply we initially get a high dimensional input data (such as a word from corpora), and we make a method such that it is translated into low dimensional representations. And this representation learns the schematics of the given input, such that we get to the observer that similar kinds of input are similar to each other.</p>
+<p>For example, if we get three words <code>{“king”, “queen”, “hello”}</code>. Here <code>king</code> and <code>queen</code> have quite a similar kind of embeddings as both represent <code>persons, elite classes, something based on history, etc</code>. Whereas the word <code>Hello</code> is a <code>greetings</code>, which does not share the similar kind of schematics.</p>
+<h3 id="so-what-are-embeddings-in-graphs">So What are embeddings in Graphs?</h3>
+<p><img alt="Graph clustering" src="https://www.python-engineer.com/images/2022-01-15-graph-ml1/graphml6.webp" /></p>
+<p>(Source: <a href="https://www.researchgate.net/profile/Amirhessam-Tahmassebi-2/publication/317055923/figure/fig1/AS:614107501826048@1523426046090/Graph-structures-a-Graphs-excel-at-hiding-their-structure-Graph-clustering-aims-at.png">Research Gate</a>)</p>
+<p>Now if we know what embeddings are, then it's easy to know what embeddings in graphs would mean. Suppose we are given a graph, and let us consider, we have node and/or edge features. Initially, we have some kind of values of these features, and we can not find any kind of relations of different nodes by just examining those features. So we do some kind of operations on graphs, such that we transform those input features into some kind of representations, and those representations group the similar kind of nodes together. If you see in this figure (right), then we will see that initially the nodes of the graph are distributed in a random order. We apply some function <code>f</code> such that it captures some kind of schematics from the neighbors. After some time, we can see that nodes with similar kinds of representations stay together with lesser distances, whereas nodes with relatively less similar representations tend to stay far from each other spatially.  The example picture below to the first one shows an example of the before and after learning the representation of real-world knowledge graphs. </p>
+<h2 id="graph-embeddings">Graph Embeddings</h2>
+<p><img alt="Graph Embeddings" src="https://www.python-engineer.com/images/2022-01-15-graph-ml1/graphml7.webp" /></p>
+<p>These are some kind of unified representation, that represents the whole graphs. Now, we can not acquire the features of graphs directly from the graphs. We indirectly get that from the node and/or the edge features. For sake of simplicity, suppose our graphs have only node features. Now we process these node features, by passing them into some black box, called GNN layers. And we get some more refined representation of the nodes.</p>
+<p>Now those embeddings are also nothing but a matrix (stacked vectors of different node embeddings). And we do some kind of an operation, such that we convert this <code>(N x D)</code> (where N = the number of nodes, D = number of features of each node), into an N-dimensional vector, such that each element of the vector represents a collective feature of each node. Altogether forming a representation of the graph. The operation done generally, in this case, is called <strong>global graph pooling</strong>. More will be covered in later blogs.</p>
+<p>## Looking into the cycle of a GraphML problem.
+So now we know all the basics and components of a graph and its essential needs for machine learning. So if we see a typical Graph machine learning scenario, then it can be divided into some steps:</p>
+<ul>
+<li>
+<ol>
+<li>Getting the raw data</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Formulating the problem as a graph problem</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Converting the raw data into graph data, which is a combination of nodes and meaningful edges.</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Using GraphMl methods to get some kind of meaningful representation of the nodes and/or edges and graph if required</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Doing the required level of tasks</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Finally the trained model is deployed into the corresponding cloud services.</li>
+</ol>
+</li>
+</ul>
+<h2 id="application-of-graphml">Application of GraphML</h2>
+<p>There are innumerable applications of Graph Machine Learning. Some of them are as follows:</p>
+<ul>
+<li>
+<ol>
+<li>Drug discovery.</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Mesh generation (2D, 3D)</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Molecule property detection</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Social circle detection</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Categorization of users/items</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Protein folding problems</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>New-gen Recommender system</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Knowledge graph completions</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Traffic forecast</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Social media connections recommendations for new users.</li>
+</ol>
+</li>
+</ul>
+<p>And this list goes on. We will discuss these tasks in more detail about their workings and other factors in the upcoming blogs.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>So in this blog, we all have learned why these fields have emerged and grown so fast. We also learned the basics of graphs, and different properties and technical terms frequently used in Graph ML. In the next session, we will learn about different kinds of tasks of Graph ML, and different types of graphs used in Graph ML. Also in later blogs, we will deep dive into the inner working of Graph ML algorithms and make the models in PyTorch geometric or in DGL (Deep Graph Library). So stay tuned. </p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Graph ML Resources" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Graph ML Resources
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.3a4b43e5.min.js"></script>
+      
+    
+  </body>
+</html>
