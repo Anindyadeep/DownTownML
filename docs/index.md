@@ -5,9 +5,17 @@
 
 One of the cool topics to study these days is `Graph Machine Learning. So here are a bunch of **FREE** resources that can help to kickstart the Graph ML journey. I have sorted these resources based on the degree of complexity and the time taken to finish them. There is no such constraint to finish some resource in some stipulated time. Everyone is expected to learn at their own pace.    
 
+**`Please note, the level of difficulty is shown by the following emojies:`**
+
+1. Easy / Begineers : 🟢
+2. Medium / Intermediate : 🟠
+3. Hard / Advanced : 🔴
+
+There are some resource, which can not be explicitely defined by one emoji. So for example tags like (beginner to intermediate) is represented by this: 🟢🟠
+
 ## **Theory** | **`Videos`** ▶️
 
-### **Understanding Graph ML with [DeepFindr](https://www.youtube.com/c/DeepFindr)** | **`LEVEL` : `Beginner`**
+### **Graph ML with [DeepFindr](https://www.youtube.com/c/DeepFindr)** | 🟢
 
 If you just want some good **intuition** about how Graph Neural Networks work with fewer maths, check out this playlist : [**PLAYLIST**](https://www.youtube.com/playlist?list=PLV8yxwGOxvvoNkzPfCx2i8an--Tkt7O8Z). First, just go through the **first 6** videos and it will give you a good understanding of the basics of Graph ML and Graph Nets.
 
@@ -26,7 +34,7 @@ You are **not at all** expected to have any prior knowledge of Graph Machine Lea
 
 ----
 
-### **One Hour Great session on Graph ML by Microsoft Research** | **`LEVEL` : `Beginner`**
+### **Graph ML session by MSR** | 🟢
 
 If you want to understand Graph Machine Learning in just 1 session, Check out this [**Video**](https://www.youtube.com/watch?v=zCEYiCxrL_0) by **Microsoft Research**. Here you will get to learn about the very fundamentals of Graph Neural Networks. How do the message passing paradigms works? 
 
@@ -44,7 +52,7 @@ You are **not at all** expected to have any prior knowledge of Graph Machine Lea
 
 ----
 
-### **CS224W is all you need** | **`LEVEL` : `Beginner to Intermediate`**
+### **CS224W is all you need** | 🟢🟠
 
 [**Stanford Engineering**](https://www.youtube.com/c/stanfordengineering/playlists) is one of the best resources out there to study any topics of Machine Learning or Deep Learning. This [**playlist**](https://www.youtube.com/playlist?list=PLoROMvodv4rPLKxIpqhjhPgdQy7imNkDn) is very long and descriptive. But it is worth watching. It covers from the very basics of **`Graph theory`**, to how **`Graph Neural Networks`** and also it covers the practical aspects of Graph ML too. Some of that includes how to deal with **`Scalability`** in Graph Machine Learning. This playlist is rather a full course on Graph Machine Learning. So it is worth investing the time in completing this course on Graph ML.
 
@@ -65,9 +73,9 @@ You are **not at all** expected to have any prior knowledge of Graph Machine Lea
 
 ----
 
-### **Enter Geometric Deep Learning.** | **`LEVEL` : `Intermediate to Advanced`**
+### **AMMI Course.** | 🟠🔴
 
-Here comes another [**playlist**](https://www.youtube.com/playlist?list=PLn2-dEmQeTfQ8YVuHBOvAhUlnIPYxkeu3), also known as the AMMI Geometric Deep Learning course. This course deals with exploring the underlined fundamental representations of natural entities like `geodesics`, `manifolds`, `mesh structures` by treating those as Graphs. This is exciting and this subfield is also called Geometric Deep Learning. Legendary Graph ML researchers, **`Michael Bronstein (Imperial College/Twitter)  Joan Bruna (NYU)  Taco Cohen (Qualcomm), and Petar Veličković (DeepMind)`** are the instructors of this course.  
+Here comes another [**playlist**](https://www.youtube.com/playlist?list=PLn2-dEmQeTfQ8YVuHBOvAhUlnIPYxkeu3), also known as the **AMMI Geometric Deep Learning course**. This course deals with exploring the underlined fundamental representations of natural entities like `geodesics`, `manifolds`, `mesh structures` by treating those as Graphs. This is exciting and this subfield is also called Geometric Deep Learning. Legendary Graph ML researchers, **`Michael Bronstein (Imperial College/Twitter)  Joan Bruna (NYU)  Taco Cohen (Qualcomm), and Petar Veličković (DeepMind)`** are the instructors of this course.  
 
 **Pre-requisites:**
 
@@ -88,7 +96,7 @@ In short, the outcome would be very satisfying and would open a new door for res
 
 -----
 
-### **Diving Deeper to Graph ML with Research paper walk through** | **`LEVEL` : `Intermediate`**
+### **Graph ML Research paper walk through** | 🟢🟠
 
 Reading a research paper is a great way to understand and dive deeper into some topic. So, if you want to understand some of the most popular Graph Neural Network architecture papers as well as the newer topics of Graph ML covering the geometric perspectives, then you must check out the awesome paper walkthrough series by **`Aleksa Gordić, (Deepmind)`**
 
@@ -96,6 +104,7 @@ Reading a research paper is a great way to understand and dive deeper into some 
 It's better to have some **prior** Knowledge in Graph Machine Learning. And stuffs like how a **GNN** fundamentally works would save your time by not getting confused during watching the playlist. 
 
 **Outcomes:**
+
 1. A better and deeper Knowledge of Graph ML.
 2. Understand how to read a research paper and get insights from it.
 
@@ -110,7 +119,7 @@ It's better to have some **prior** Knowledge in Graph Machine Learning. And stuf
 
 Now that you have got some cool video resources, here are some books for book lovers. Also, this book provides a better in-depth understanding of Graph Machine Learning. 
 
-### **Machine Learning with PyTorch and Scikit Learn** | **`LEVEL` : `Beginner`** 
+### **Machine Learning with PyTorch and Scikit Learn** | 🟢
 
 One of the best books out there for beginners in ML. This book not only covers the basics of Machine Learning, and deep learning but also contains some cool topics like Graph ML and Deep Reinforcement Learning. **`Chapter 18`** contains the full theory of what Graph ML is, and its different use cases. It also helps you to code a simple Graph Neural Network model from scratch in `PyTorch`. 
 
@@ -130,7 +139,7 @@ To **get started** with the book in **general**, you absolutely **do not** need 
 
 ----
 
-### **Graph Machine Learning** | **`LEVEL` : `Beginner`** 
+### **Graph Machine Learning** | 🟢
 
 Now if you want to get a hands-on book dedicated to the basics of graphs and topics like How to load a Graph dataset, visualize it using `NetworkX` and create Machine Learning models to operate on this dataset using `Tensorflow`. This book is a perfect pick. Also, this book has some better visualizations to make readers understand the topics. So definitely check this out, if you are more aligned with Tensorflow.
 
@@ -149,7 +158,7 @@ You are **not at all** expected to have any prior knowledge of Graph Machine Lea
 
 ----
 
-### **Graph Neural Networks: Foundations and Applications** | **`LEVEL` : `Intermediate`** 
+### **Graph Neural Networks: Foundations and Applications** | 🟠
 
 This book provides you with a more formal way to teach Graph Machine Learning in general and how Graph Neural Networks in particular. It teaches what `Representation Learning` in general is. And also provides a great depth of how `representation learning` is used in the context of images, sound, texts, and graphs. From very popular topics to very newer and untouched topics in graph ML, this book covers it all. The book has 700+ pages. But it is not required to finish the book at once. But reading this book is surely worth it when it comes to understanding different Graph ML topics in depth. 
 
@@ -167,9 +176,9 @@ You are **not at all** expected to have any prior knowledge of Graph Machine Lea
 
 ----
 
-### **Graph Representation Learning** | **`LEVEL` : `Intermediate to Advanced`** 
+### **GRL Book** | 🟠🔴
 
-This is also a famous book related to representation learning and the theory behind representation learning and Graph ML. It also covers some graph theories. This book is small but is a bit advanced. So not recommended for beginners. This book covers some advanced concepts like Spectral Graph theory. But if you have some prior knowledge of ML and some foundational mathematical concepts, then this book would be a great resource to revise. 
+This is also a famous book called **Graph Representation Learning** and is related to representation learning and the theory behind representation learning and Graph ML. It also covers some graph theories. This book is small but is a bit advanced. So not recommended for beginners. This book covers some advanced concepts like Spectral Graph theory. But if you have some prior knowledge of ML and some foundational mathematical concepts, then this book would be a great resource to revise. 
 
 **Pre-requisites:**
 
@@ -190,13 +199,13 @@ This is also a famous book related to representation learning and the theory beh
 
 
 
-## **Practical resources with more Hands-on projects** 🙋‍♂️
+## **Hands-on Practical resources** 🙋‍♂️
 
 Here are some resources containing some playlists, videos, and blogs. These are more practical and more hands-on.
 
 ### **`PLAYLIST`**
 
-### **PyTorch Geometric Hands-on Workshop** | **`LEVEL` : `Begineer to Intermediate`** 
+### **PyTorch Geometric** | 🟢🟠
 This set of videos in the playlist provides theory as well as hands-on tutorials using `PyTorch Geometric`. It covers all the topics like:
 
 1. How to load Graph data using PyG
@@ -212,7 +221,7 @@ Some Knowledge of Machine Learning / Deep Learning is required. Knowledge of Gra
 
 ----
 
-### **Extended Graph ML series by [DeepFindr](https://www.youtube.com/c/DeepFindr)** | **`LEVEL` : `Begineer`**
+### **GraphML by [DeepFindr](https://www.youtube.com/c/DeepFindr)** | 🟢
 
 This Playlist contains a full playlist that covers the whole basics of Graph Machine Learning. It provides cool animations and also does hand on practical using `PyTorch Geometric`. It is worth checking out. 
 
@@ -234,7 +243,7 @@ Some Knowledge of Machine Learning / Deep Learning is a plus. But you are **not*
 
 ### **`VIDEOS`**
 
-### **1 Hour Session on GNN using Tensorflow** | **`LEVEL` : `Begineer`**
+### **GNN using Tensorflow** | 🟢
 
 Check out this great 1 hr session come tutorial by **`Petar Veličković`**, Where he provides some great insights on how graph machine learning works and also does a hands-on session using `TensorFlow`. So `TensorFlow` lovers, this video is a perfect fit for you. 
 
@@ -255,8 +264,8 @@ Some Knowledge of Machine Learning / Deep Learning is a plus. But you are **not*
 
 ### **`BLOGS`**
 
-### **Getting started with GNN with NEPTUNE.ai** | **`LEVEL` : `Begineer`**
-If want to understand the basics of GNNs, message passing, applications of GNNs, and also code a simple GNN with bare PyTorch, then this blog is all you need. One of the most compact blogs that cover all the above topics. This blog is also good for beginners if they want to get a small glimpse of Graph ML in a short period.
+### **Getting started with GNNs** | 🟢
+If want to understand the basics of GNNs, message passing, applications of GNNs, and also code a simple GNN with bare PyTorch, then this blog is all you need. One of the most compact blogs that cover all the above topics. This blog is also good for beginners if they want to get a small glimpse of Graph ML in a short period.This blog is powered by **[Neptune.ai](https://neptune.ai/)**
 
 **Pre-requisites:**
 
@@ -273,7 +282,7 @@ Some Knowledge of Machine Learning / Deep Learning is a plus. But you are **not*
 
 ----
 
-### **Hand's on Tutorial on PyTorch Geometric Blog** | **`LEVEL` : `Begineer`**
+### **Hand's on Tutorial on PyTorch Geometric Blog** | 🟢 
 
 This is a great blog for starters who want to enter the Graph ML space. This two-part blog covers the very basics of Graph Machine learning concepts and also implements those concepts on PyTorch using a real-world dataset. The blog is interactive and it sure will be worth it to check that out. 
 
@@ -290,7 +299,7 @@ Some Knowledge of Machine Learning / Deep Learning is a plus. But you are **not*
 
 ----
 
-### **Understand the nitty gritty of Graph Attention Network** | **`LEVEL` : `Intermediate`**
+### **Understand GATs** | 🟢🟠
 
 This blog is provided by the Deep Learning group of the Indian Institute of Technology Roorkee (IITR). This blog provides some great insights about the very basic difference between the two most popular architectures viz: `Graph Convolutional Network (GCN)` and `Graph Attention Network (GAT)`. This blog also provides an in-depth tutorial of `Graph Attention Network` and also provides the inner working through `PyTorch` Code. Readers can gain some great insights and their foundations polished in the working of GATs. 
 
@@ -301,7 +310,7 @@ This blog is provided by the Deep Learning group of the Indian Institute of Tech
 
 ----
 
-### **DISTILL.PUB** | **`LEVEL` : `Begineer to Intermediate`**
+### **DISTILL.PUB** | 🟢🟠
 One of the most interactive blogs that cover the topic of Graph Machine Learning. Though some parts cover the spectral graph machine learning concepts (in part 2), which require some math concepts. However, readers not aware of those concepts can just only read this blog to visualize the different representations and animations to get more intuition. 
 
 **Pre-requisites:**
@@ -318,7 +327,7 @@ Readers will get to build great visual intuition about what Graph Machine Learni
 ----
 
 
-### **THE AI SUMMER** | **`LEVEL` : `Begineer to Intermediate`**
+### **THE AI SUMMER** | 🟢🟠
 
 **THE AI SUMMER**, is one of the best new age Machine Learning blogs that not only covers Graph Machine Learning but other Hot topics like Transformers, ViTs, Multimodal learning, etc. The blog contains a subsection dedicated to Graph Machine Learning. The blog explains Graph ML and the working of GNNs along with its code in a very compact form. This source is very much useful to get some more added information regarding Graph Machine Learning. 
 
@@ -331,7 +340,7 @@ Readers will get to build great visual intuition about what Graph Machine Learni
 
 ----
 
-### **CS224W Notes at WANDB.ai** | **`LEVEL` : `Intermediate to Advanced`**
+### **CS224W Notes at WANDB.ai** | 🟠🔴
 
 Another great resource of Graph Machine Learning. These are the notes of the popular **[CS224W](https://web.stanford.edu/class/cs224w/)** course. This set of blogs covers the basics of Graph theory along with some theories of topology and network science. Further, it covers the foundational theories of Graph Neural networks and message passing. This blog is more like revision notes, so the readers should have some prior knowledge of Machine Learning and Graph Machine Learning. 
 
